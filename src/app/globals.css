@@ -1,26 +1,28 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Estilos personalizados */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  transition: color 0.3s ease;
+}
+
+button {
+  transition: background-color 0.3s ease;
+}
+
+/* Colores base: verdes, blancos y grises */
+:root {
+  --verde-principal: #2F855A;
+  --verde-claro: #68D391;
+  --gris-claro: #F7FAFC;
+  --gris-texto: #4A5568;
 }
