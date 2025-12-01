@@ -3,7 +3,14 @@
 import ImageCarousel from "@/components/ImageCarousel";
 import { useInView } from "react-intersection-observer";
 
-const AnimatedCard = ({ ruta, i }: { ruta: any; i: number }) => {
+interface Ruta {
+    nombre: string;
+    imagenes: string[];
+    descripcion: string;
+    alt: string;
+}
+
+const AnimatedCard = ({ ruta, i }: { ruta: Ruta; i: number }) => {
     const { ref, inView } = useInView({
         triggerOnce: true,
         threshold: 0.1,
@@ -23,7 +30,7 @@ const AnimatedCard = ({ ruta, i }: { ruta: any; i: number }) => {
 };
 
 export default function Entorno() {
-    const rutas = [
+    const rutas: Ruta[] = [
         {
             nombre: "El Chorro",
             imagenes: ["/images/chorro/chorro.jpg", "/images/chorro/chorro2.jpg", "/images/chorro/chorro3.jpg", "/images/chorro/chorro4.jpg"],
@@ -68,7 +75,7 @@ export default function Entorno() {
         },
         {
             nombre: "Miradores de Cabañeros",
-            imagenes: ["/images/miradores/miradores.jpg", "/images/miradores/miradores-4.jpg", "/images/mirador.jpeg","/images/miradores/miradorcaba.jpg"],
+            imagenes: ["/images/miradores/miradores.jpg", "/images/miradores/miradores-4.jpg", "/images/miradores/mirador.jpeg","/images/miradores/miradorcaba.jpg"],
             descripcion: "Contempla la inmensidad del Parque Nacional de Cabañeros desde sus numerosos miradores estratégicamente situados.",
             alt: "Vistas panorámicas desde un mirador del Parque Nacional de Cabañeros."
         }

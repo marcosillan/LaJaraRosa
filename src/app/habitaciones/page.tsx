@@ -3,7 +3,14 @@
 import ImageCarousel from "@/components/ImageCarousel";
 import { useInView } from "react-intersection-observer";
 
-const AnimatedCard = ({ habitacion, i }: { habitacion: any; i: number }) => {
+interface Habitacion {
+    nombre: string;
+    imagenes: string[];
+    descripcion: string;
+    alt: string;
+}
+
+const AnimatedCard = ({ habitacion, i }: { habitacion: Habitacion; i: number }) => {
     const { ref, inView } = useInView({
         triggerOnce: true,
         threshold: 0.1,
@@ -23,7 +30,7 @@ const AnimatedCard = ({ habitacion, i }: { habitacion: any; i: number }) => {
 };
 
 export default function Habitaciones() {
-    const habitaciones = [
+    const habitaciones: Habitacion[] = [
         {
             nombre: "Salón y Cocina",
             imagenes: ["/images/SALON/salon (2).jpg","/images/SALON/salon.jpg","/images/SALON/salon2.jpg", "/images/SALON/salon3.jpg", "/images/SALON/salon4.jpg", "/images/SALON/salon5.jpg", "/images/SALON/salon7.jpg","/images/SALON/salon8.jpg"],
