@@ -4,7 +4,7 @@ import ImageCarousel from "@/components/ImageCarousel";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 
-const AnimatedCard = ({ item, i, children }) => {
+const AnimatedCard = ({ i, children }: { i: number; children: React.ReactNode }) => {
     const { ref, inView } = useInView({
         triggerOnce: true,
         threshold: 0.1,
@@ -110,7 +110,7 @@ export default function Home() {
             {/* Sección de salon y patio */}
             <div className="grid md:grid-cols-2 gap-6">
                 {patios.map((patio, i) => (
-                    <AnimatedCard key={i} item={patio} i={i}>
+                    <AnimatedCard key={i} i={i}>
                         <ImageCarousel images={patio.imagenes} alt={patio.alt} />
                         <h2 className="text-2xl font-heading text-marron-oscuro/70 mb-2">{patio.nombre}</h2>
                         <p className="text-gris-texto">{patio.descripcion}</p>
@@ -134,7 +134,7 @@ export default function Home() {
             {/* Sección de habitaciones */}
             <div className="grid md:grid-cols-3 gap-6">
                 {habitaciones.map((habitacion, i) => (
-                    <AnimatedCard key={i} item={habitacion} i={i}>
+                    <AnimatedCard key={i} i={i}>
                         <ImageCarousel images={habitacion.imagenes} alt={habitacion.alt} />
                         <h3 className="text-2xl font-heading text-verde mb-2">Habitación {habitacion.nombre}</h3>
                     </AnimatedCard>
@@ -153,7 +153,7 @@ export default function Home() {
             {/* Sección de rutas */}
             <div className="grid md:grid-cols-4 gap-6">
                 {rutas.map((ruta, i) => (
-                    <AnimatedCard key={i} item={ruta} i={i}>
+                    <AnimatedCard key={i} i={i}>
                         <ImageCarousel images={ruta.imagenes} alt={ruta.alt} />
                         <h3 className="text-l font-heading text-verde mb-2">Ruta {ruta.nombre}</h3>
                     </AnimatedCard>

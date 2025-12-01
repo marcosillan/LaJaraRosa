@@ -3,7 +3,7 @@
 import ImageCarousel from "@/components/ImageCarousel";
 import { useInView } from "react-intersection-observer";
 
-const AnimatedCard = ({ habitacion, i }) => {
+const AnimatedCard = ({ habitacion, i }: { habitacion: any; i: number }) => {
     const { ref, inView } = useInView({
         triggerOnce: true,
         threshold: 0.1,
