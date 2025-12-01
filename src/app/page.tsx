@@ -49,7 +49,7 @@ export default function Home() {
         },
         {
             nombre: "Patio y Exteriores",
-            imagenes: ["/images/PATIO_EXTERIORES/patio (4).jpg","/images/PATIO_EXTERIOROES/piscina.jpg","/images/PATIO_EXTERIORES/patio (6).jpg","/images/PATIO_EXTERIORES/patio (2).jpg","/images/PATIO_EXTERIORES/patio (3).jpg","/images/PATIO_EXTERIORES/barbacoa.jpg", "/images/PATIO_EXTERIORES/barbacoa1.jpg", "/images/PATIO_EXTERIORES/fachada (4).jpg", "/images/PATIO_EXTERIORES/fachada (2).jpg" ],
+            imagenes: ["/images/PATIO_EXTERIORES/patio (4).jpg","/images/PATIO_EXTERIORES/piscina.jpg","/images/PATIO_EXTERIORES/patio (6).jpg","/images/PATIO_EXTERIORES/patio (2).jpg","/images/PATIO_EXTERIORES/patio (3).jpg","/images/PATIO_EXTERIORES/barbacoa.jpg", "/images/PATIO_EXTERIORES/barbacoa1.jpg", "/images/PATIO_EXTERIORES/fachada (4).jpg", "/images/PATIO_EXTERIORES/fachada (2).jpg" ],
             descripcion: "Disfruta de nuestra piscina en verano, una barbacoa al aire libre y una zona chill-out para relajarte.",
             alt: "Patio exterior de La Jara Rosa con piscina, barbacoa y zona chill-out en Los Navalucillos."
         }
