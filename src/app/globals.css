@@ -1,28 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&family=Dancing+Script:wght@700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Estilos personalizados */
-body {
-  font-family: 'Inter', sans-serif;
+@layer base {
+    body {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('/images/fondo.png');
+        background-size: cover;
+        background-position: center 30%;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-heading text-gris-texto;
+    }
+
+    a {
+        @apply transition-colors duration-300;
+    }
+
+    button {
+        @apply transition-all duration-300;
+    }
+
+    /* Swiper Customization */
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #2F855A !important;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: #2F855A !important;
+    }
 }
 
-h1, h2, h3, h4 {
-  font-family: 'Poppins', sans-serif;
-}
+@layer components {
+    /* Botones */
+    .btn-primary {
+        @apply inline-block bg-rosa text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg;
+        @apply transition-transform transform hover:scale-105 hover:bg-rosa;
+    }
 
-a {
-  transition: color 0.3s ease;
-}
+    .btn-secondary {
+        @apply bg-rosa-suave text-gris-texto px-5 py-2 rounded-lg font-medium hover:bg-rosa;
+    }
 
-button {
-  transition: background-color 0.3s ease;
-}
+    /* Tarjetas */
+    .card {
+        @apply bg-white rounded-2xl shadow-xl overflow-hidden;
+        @apply transition-transform duration-300 transform hover:-translate-y-2;
+        @apply border border-gris-medio/30;
+    }
 
-/* Colores base: verdes, blancos y grises */
-:root {
-  --verde-principal: #2F855A;
-  --verde-claro: #68D391;
-  --gris-claro: #F7FAFC;
-  --gris-texto: #4A5568;
+    .card-title {
+        @apply text-2xl font-bold font-heading text-verde;
+    }
+
+    .card-body {
+        @apply p-6;
+    }
+
+    /* Formularios */
+    .form-input {
+        @apply w-full border-2 border-gray-200 p-3 rounded-lg;
+        @apply focus:outline-none focus:border-verde transition-colors;
+    }
+
+    .form-label {
+        @apply block text-lg font-semibold mb-2 text-gris-texto;
+    }
+
+    /* Títulos de Sección */
+    .section-title {
+        @apply text-4xl font-bold font-heading text-verde;
+    }
+
+    .section-subtitle {
+        @apply mt-4 text-lg max-w-2xl mx-auto text-gris-texto;
+    }
+
+    /* Animaciones */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .fade-in-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

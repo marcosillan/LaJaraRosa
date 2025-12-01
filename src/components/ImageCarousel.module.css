@@ -1,0 +1,13 @@
+/*
+  Usamos :global para poder apuntar a las clases internas de Swiper
+  desde un módulo de CSS.
+*/
+
+:global(.swiper-button-next),
+:global(.swiper-button-prev) {
+  color: #2F855A !important;
+}
+
+:global(.swiper-pagination-bullet-active) {
+  background-color: #2F855A !important;
+}
