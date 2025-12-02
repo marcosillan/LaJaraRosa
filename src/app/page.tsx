@@ -13,7 +13,7 @@ const AnimatedCard = ({ i, children }: { i: number; children: React.ReactNode })
     return (
         <div
             ref={ref}
-            className={`bg-white/40 backdrop-blur-sm shadow-md rounded-lg p-4 text-center fade-in ${inView ? "fade-in-visible" : ""}`}
+            className={`bg-white/40 backdrop-blur-sm shadow-md rounded-lg p-2 sm:p-4 text-center fade-in ${inView ? "fade-in-visible" : ""}`}
             style={{ transitionDelay: `${i * 100}ms` }}
         >
             {children}
@@ -78,28 +78,28 @@ export default function Home() {
     ];
 
     return (
-        <section className="space-y-10">
+        <section className="space-y-8">
             {/* Hero */}
-            <div className="bg-marron/40 backdrop-blur-sm shadow-md rounded-lg p-6 text-center">
-                <h1 className="text-5xl font-heading text-marron-oscuro/70 mb-4">La Jara Rosa: Tu Alojamiento Rural en Los Navalucillos, en Cabañeros</h1>
-                <h2 className="text-xl text-white mb-6">
+            <div className="bg-marron/40 backdrop-blur-sm shadow-md rounded-lg p-4 text-center">
+                <h1 className="text-2xl sm:text-3xl md:text-5xl font-heading text-marron-oscuro/70 mb-4">La Jara Rosa: Tu Alojamiento Rural en Los Navalucillos, en Cabañeros</h1>
+                <h2 className="text-base sm:text-lg md:text-xl text-white mb-6">
                     Disfruta de un alojamiento moderno y confortable, rodeado de la naturaleza de los Montes de Toledo.
                 </h2>
-                <div className="flex justify-center gap-4">
+                <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-4">
                     <a
                         href="https://wa.me/679840695"
-                        className="inline-block px-6 py-3 bg-verde text-white rounded hover:bg-verde-claro transition"
+                        className="inline-block px-4 py-2 text-sm sm:px-6 sm:py-3 bg-verde text-white rounded hover:bg-verde-claro transition"
                     >
                         Contacta por WhatsApp
                     </a>
                     <Link
                         href="/habitaciones"
-                        className="inline-block px-6 py-3 bg-white text-marron rounded hover:bg-verde-pistacho transition"
+                        className="inline-block px-4 py-2 text-sm sm:px-6 sm:py-3 bg-white text-marron rounded hover:bg-verde-pistacho transition"
                     >
                         Ver el Alojamiento
                     </Link>
                 </div>
-                <div className="mt-4 text-l text-white text-center">
+                <div className="mt-4 text-xs sm:text-sm md:text-base text-white text-center">
                     <p>- Esta casa está preparada para 6-8 personas</p>
                     <p>- Pet Friendly (consultar antes de reservar)</p>
                     <p>- Ubicada en un sitio perfecto en el pueblo de Los Navalucillos.</p>
@@ -108,19 +108,19 @@ export default function Home() {
             </div>
 
             {/* Sección de salon y patio */}
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {patios.map((patio, i) => (
                     <AnimatedCard key={i} i={i}>
                         <ImageCarousel images={patio.imagenes} alt={patio.alt} />
-                        <h2 className="text-2xl font-heading text-marron-oscuro/70 mb-2">{patio.nombre}</h2>
-                        <p className="text-gris-texto">{patio.descripcion}</p>
+                        <h2 className="text-lg sm:text-xl md:text-2xl font-heading text-marron-oscuro/70 mb-2">{patio.nombre}</h2>
+                        <p className="text-sm sm:text-base text-gris-texto">{patio.descripcion}</p>
                     </AnimatedCard>
                 ))}
             </div>
 
-            <div className="bg-marron/40 backdrop-blur-sm shadow-md rounded-lg p-6 text-center">
-                <h2 className="text-4xl font-heading text-marron-oscuro/70 mb-6 text-center">Nuestras Habitaciones</h2>
-                <div className="text-l font-heading text-white mb-6 text-center">
+            <div className="bg-marron/40 backdrop-blur-sm shadow-md rounded-lg p-4 sm:p-6 text-center">
+                <h2 className="text-xl sm:text-2xl md:text-4xl font-heading text-marron-oscuro/70 mb-4 text-center">Nuestras Habitaciones</h2>
+                <div className="text-xs sm:text-sm md:text-base font-heading text-white text-center">
                     <p>- Dos camas individuales por habitación.</p>
                     <p>- Baño en cada habitación con columna de ducha termostática, radiador toallero y secador.</p>
                     <p>- Ropa de cama de calidad.</p>
@@ -132,30 +132,30 @@ export default function Home() {
 
 
             {/* Sección de habitaciones */}
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {habitaciones.map((habitacion, i) => (
                     <AnimatedCard key={i} i={i}>
                         <ImageCarousel images={habitacion.imagenes} alt={habitacion.alt} />
-                        <h3 className="text-2xl font-heading text-verde mb-2">Habitación {habitacion.nombre}</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-heading text-verde mb-2">Habitación {habitacion.nombre}</h3>
                     </AnimatedCard>
                 ))}
             </div>
 
             {/* Sección de entorno */}
-            <div className="bg-marron/40 backdrop-blur-sm shadow-md rounded-lg p-6">
-                <h2 className="text-3xl font-heading text-marron-oscuro/70 mb-4 text-center">Explora el Parque de Cabañeros</h2>
-                <p className="text-l font-heading text-white mb-6 text-center">
+            <div className="bg-marron/40 backdrop-blur-sm shadow-md rounded-lg p-4 sm:p-6">
+                <h2 className="text-lg sm:text-xl md:text-3xl font-heading text-marron-oscuro/70 mb-4 text-center">Explora el Parque de Cabañeros</h2>
+                <p className="text-xs sm:text-sm md:text-base font-heading text-white text-center">
                     Nuestra casa rural es el punto de partida ideal para descubrir las rutas de senderismo, la fauna y los paisajes únicos de los Montes de Toledo.
                 </p>
             </div>
 
 
             {/* Sección de rutas */}
-            <div className="grid md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4">
                 {rutas.map((ruta, i) => (
                     <AnimatedCard key={i} i={i}>
                         <ImageCarousel images={ruta.imagenes} alt={ruta.alt} />
-                        <h3 className="text-l font-heading text-verde mb-2">Ruta {ruta.nombre}</h3>
+                        <h3 className="text-sm sm:text-base md:text-lg font-heading text-verde mb-2">Ruta {ruta.nombre}</h3>
                     </AnimatedCard>
                 ))}
             </div>

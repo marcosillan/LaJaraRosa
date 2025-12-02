@@ -65,14 +65,14 @@ export default function Habitaciones() {
 
     return (
         <section className="space-y-10">
-            <h1 className="text-5xl font-heading text-marron mb-6 text-center">Habitaciones del Alojamiento Rural</h1>
-            <div className="text-xl text-marron text-center space-y-2">
+            <h1 className="text-4xl md:text-5xl font-heading text-marron mb-6 text-center">Habitaciones del Alojamiento Rural</h1>
+            <div className="text-lg md:text-xl text-marron-oscuro text-center space-y-2">
                 <p>- Casa preparada para 6-8 personas (incluye sofá-cama en el salón).</p>
                 <p>- Ubicada en el corazón de Los Navalucillos, base ideal para explorar el Parque de Cabañeros.</p>
                 <p>- Cada habitación cuenta con: dos camas individuales, baño privado con ducha termostática y secador, ropa de cama y toallas de calidad, aire acondicionado (frío/calor) y ventilador de techo.</p>
                 <p>- Pet Friendly (se ruega consultar antes de reservar).</p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 text-center gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 text-center gap-6">
                 {habitaciones.map((habitacion, i) => (
                     <AnimatedCard key={i} habitacion={habitacion} i={i} />
                 ))}

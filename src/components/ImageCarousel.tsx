@@ -45,7 +45,7 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
               alt={`${alt} - Imagen ${i + 1}`}
               width={500}
               height={300}
-              className="w-full aspect-[3/4] object-cover cursor-pointer"
+              className="w-full aspect-video md:aspect-[3/4] object-cover cursor-pointer"
             />
           </SwiperSlide>
         ))}

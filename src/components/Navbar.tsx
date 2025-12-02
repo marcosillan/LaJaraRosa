@@ -11,16 +11,17 @@ export default function Navbar() {
 
     return (
         <header className="w-full bg-marron backdrop-blur-sm shadow-sm border-b border-gris-medio/30 sticky top-0 z-50">
-            <nav className="max-w-7xl mx-auto flex items-center justify-between px-5 py-3">
+            <nav className="max-w-7xl mx-auto flex items-center justify-between px-2 sm:px-4 lg:px-8 py-3">
                 {/* LOGO / NOMBRE */}
                 <Link href="/" className="flex items-center gap-3">
                     <Image
                         src="/images/logo.png"
                         alt="Logo La Jara Rosa"
-                        width={40}
-                        height={40}
+                        width={32}
+                        height={32}
+                        className="sm:w-10 sm:h-10"
                     />
-                    <span className="text-4xl font-script text-verde-pistacho">
+                    <span className="text-3xl sm:text-4xl font-script text-verde-pistacho">
                         La Jara Rosa
                     </span>
                 </Link>

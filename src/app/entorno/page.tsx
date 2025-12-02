@@ -23,8 +23,8 @@ const AnimatedCard = ({ ruta, i }: { ruta: Ruta; i: number }) => {
             style={{ transitionDelay: `${i * 100}ms` }}
         >
             <ImageCarousel images={ruta.imagenes} alt={ruta.alt} />
-            <h3 className="text-2xl font-heading text-verde mb-2 text-center">{ruta.nombre}</h3>
-            <p className="text-gris-texto text-center">{ruta.descripcion}</p>
+            <h3 className="text-xl md:text-2xl font-heading text-verde mb-2 text-center">{ruta.nombre}</h3>
+            <p className="text-base md:text-lg text-gris-texto text-center">{ruta.descripcion}</p>
         </div>
     );
 };
@@ -83,14 +83,14 @@ export default function Entorno() {
 
     return (
         <section className="space-y-10">
-            <h1 className="text-5xl font-heading text-marron mb-6 text-center">Rutas de Senderismo y Entorno de Cabañeros y Los Navalucillos</h1>
+            <h1 className="text-4xl md:text-5xl font-heading text-marron mb-6 text-center">Rutas de Senderismo y Entorno de Cabañeros y Los Navalucillos</h1>
             <div className="bg-white/10 backdrop-blur-sm shadow-md rounded-lg p-4 text-center">
-                <h2 className="text-2xl font-heading text-verde mb-2">Turismo Rural en los Montes de Toledo</h2>
-                <p className="text-gris-texto">
+                <h2 className="text-2xl md:text-3xl font-heading text-verde mb-2">Turismo Rural en los Montes de Toledo</h2>
+                <p className="text-base md:text-lg text-gris-texto">
                     Disfruta de rutas de senderismo por el Parque Nacional de Cabañeros, con paisajes espectaculares y una fauna única. Además, descubre los increíbles parajes y lugares con encanto de Los Navalucillos.
                 </p>
             </div>
-            <div className="grid md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                 {rutas.map((ruta, i) => (
                     <AnimatedCard key={i} ruta={ruta} i={i} />
                 ))}
