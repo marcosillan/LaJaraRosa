@@ -1,6 +1,7 @@
 "use client";
 
 import ImageCarousel from "@/components/ImageCarousel";
+import LazyCarousel from "@/components/LazyCarousel";
 import { useInView } from "react-intersection-observer";
 
 interface Habitacion {
@@ -22,7 +23,7 @@ const AnimatedCard = ({ habitacion, i }: { habitacion: Habitacion; i: number }) 
             className={`bg-white/40 backdrop-blur-sm shadow-md rounded-lg p-4 fade-in ${inView ? "fade-in-visible" : ""}`}
             style={{ transitionDelay: `${i * 100}ms` }}
         >
-            <ImageCarousel images={habitacion.imagenes} alt={habitacion.alt} />
+            <LazyCarousel images={habitacion.imagenes} alt={habitacion.alt} />
             <h2 className="text-2xl font-heading text-verde mb-2">{habitacion.nombre}</h2>
             <p className="text-gris-texto">{habitacion.descripcion}</p>
         </div>

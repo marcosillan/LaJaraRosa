@@ -1,6 +1,7 @@
 "use client";
 
 import ImageCarousel from "@/components/ImageCarousel";
+import LazyCarousel from "@/components/LazyCarousel";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 
@@ -111,7 +112,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {patios.map((patio, i) => (
                     <AnimatedCard key={i} i={i}>
-                        <ImageCarousel images={patio.imagenes} alt={patio.alt} />
+                        <LazyCarousel images={patio.imagenes} alt={patio.alt} maxMobile={4} />
                         <h2 className="text-lg sm:text-xl md:text-2xl font-heading text-marron-oscuro/70 mb-2">{patio.nombre}</h2>
                         <p className="text-sm sm:text-base text-gris-texto">{patio.descripcion}</p>
                     </AnimatedCard>
@@ -135,7 +136,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {habitaciones.map((habitacion, i) => (
                     <AnimatedCard key={i} i={i}>
-                        <ImageCarousel images={habitacion.imagenes} alt={habitacion.alt} />
+                        <LazyCarousel images={habitacion.imagenes} alt={habitacion.alt} maxMobile={4}/>
                         <h3 className="text-lg sm:text-xl md:text-2xl font-heading text-verde mb-2">Habitación {habitacion.nombre}</h3>
                     </AnimatedCard>
                 ))}
@@ -154,7 +155,7 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4">
                 {rutas.map((ruta, i) => (
                     <AnimatedCard key={i} i={i}>
-                        <ImageCarousel images={ruta.imagenes} alt={ruta.alt} />
+                        <LazyCarousel images={ruta.imagenes} alt={ruta.alt}  maxMobile={3}/>
                         <h3 className="text-sm sm:text-base md:text-lg font-heading text-verde mb-2">Ruta {ruta.nombre}</h3>
                     </AnimatedCard>
                 ))}

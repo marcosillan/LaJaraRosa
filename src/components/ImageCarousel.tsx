@@ -49,6 +49,7 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
                             fetchPriority={i === 0 ? "high" : "auto"}
                             sizes="(max-width: 768px) 100vw, 50vw"
                             className="w-full aspect-video object-cover cursor-pointer"
+                            quality={60}
                         />
                     </SwiperSlide>
                 ))}

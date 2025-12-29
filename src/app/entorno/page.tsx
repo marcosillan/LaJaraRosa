@@ -2,6 +2,7 @@
 
 import ImageCarousel from "@/components/ImageCarousel";
 import { useInView } from "react-intersection-observer";
+import LazyCarousel from "@/components/LazyCarousel";
 
 interface Ruta {
     nombre: string;
@@ -22,7 +23,7 @@ const AnimatedCard = ({ ruta, i }: { ruta: Ruta; i: number }) => {
             className={`bg-white/10 backdrop-blur-sm shadow-md rounded-lg p-4 fade-in ${inView ? "fade-in-visible" : ""}`}
             style={{ transitionDelay: `${i * 100}ms` }}
         >
-            <ImageCarousel images={ruta.imagenes} alt={ruta.alt} />
+            <LazyCarousel images={ruta.imagenes} alt={ruta.alt} />
             <h3 className="text-xl md:text-2xl font-heading text-verde mb-2 text-center">{ruta.nombre}</h3>
             <p className="text-base md:text-lg text-gris-texto text-center">{ruta.descripcion}</p>
         </div>
