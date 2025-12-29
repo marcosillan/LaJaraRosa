@@ -20,6 +20,7 @@ export default function Navbar() {
                         width={32}
                         height={32}
                         className="sm:w-10 sm:h-10"
+                        priority
                     />
                     <span className="text-3xl sm:text-4xl font-script text-verde-pistacho">
                         La Jara Rosa

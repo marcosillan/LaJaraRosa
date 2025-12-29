@@ -6,7 +6,7 @@ export default function Footer() {
     const googleMapsUrl = "https://maps.app.goo.gl/sf4mnT4E2jLfB7VPA";
     const email = "lajararosa9@gmail.com";
     const telefono = "+34 679 840 695";
-    const escapadaRuralUrl = "#"; // Reemplaza "#" con tu enlace real de Escapada Rural
+    const escapadaRuralUrl = "https://www.escapadarural.com/casa-rural/toledo/la-jara-rosa"; // Reemplaza "#" con tu enlace real de Escapada Rural
 
     return (
         <footer className="bg-marron backdrop-blur-sm text-white mt-10 shadow-inner">
