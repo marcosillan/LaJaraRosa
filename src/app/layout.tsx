@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Background from "../components/Background";
 
 export const metadata = {
     title: "La Jara Rosa-Los Navalucillos",
@@ -10,9 +11,12 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="es">
-            <body className="bg-gris-claro text-gris-texto font-sans flex flex-col min-h-screen">
+            <body className="bg-gris-claro text-gris-texto font-sans flex flex-col min-h-screen relative">
+                <Background />
                 <Navbar />
-                <main className="flex-grow max-w-7xl mx-auto w-full px-2 sm:px-4 lg:px-8 py-6">{children}</main>
+                <main className="flex-grow max-w-7xl mx-auto w-full px-2 sm:px-4 lg:px-8 py-6">
+                    {children}
+                </main>
                 <Footer />
             </body>
         </html>

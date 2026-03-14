@@ -34,7 +34,7 @@ export default function Entorno() {
     const rutas: Ruta[] = [
         {
             nombre: "El Chorro",
-            imagenes: ["/images/chorro/chorro.jpg", "/images/chorro/chorro2.jpg", "/images/chorro/chorro3.jpg", "/images/chorro/chorro4.jpg"],
+            imagenes: ["/images/chorro/chorro2.jpg", "/images/chorro/chorro3.jpg", "/images/chorro/chorro4.jpg"],
             descripcion: "Una ruta de dificultad media-baja con vistas espectaculares, conectada con La Chorrera y el Rocigalgo. Perfecta para todos los públicos.",
             alt: "Cascada de El Chorro en el Parque Nacional de Cabañeros."
         },
@@ -52,7 +52,7 @@ export default function Entorno() {
         },
         {
             nombre: "La Encina Milenaria",
-            imagenes: ["/images/encina/49468.jpg", "/images/encina/encina.jpeg", "/images/encina/ruta-encina-centenaria-1.jpg", "/images/encina/rana-de-cabaneros-en.jpg"],
+            imagenes: ["/images/encina/49468.jpg", "/images/encina/ruta-encina-centenaria-1.jpg", "/images/encina/rana-de-cabaneros-en.jpg"],
             descripcion: "Una ruta sencilla y accesible para contemplar un árbol monumental con casi mil años de historia y dimensiones espectaculares.",
             alt: "La Encina Milenaria de Los Navalucillos."
         },
@@ -76,7 +76,7 @@ export default function Entorno() {
         },
         {
             nombre: "Miradores de Cabañeros",
-            imagenes: ["/images/miradores/miradores.jpg", "/images/miradores/miradores-4.jpg", "/images/miradores/mirador.jpeg","/images/miradores/miradorcaba.jpg"],
+            imagenes: ["/images/miradores/miradores.jpg", "/images/miradores/miradores-4.jpg", "/images/mirador.jpeg","/images/miradores/miradorcaba.jpg"],
             descripcion: "Contempla la inmensidad del Parque Nacional de Cabañeros desde sus numerosos miradores estratégicamente situados.",
             alt: "Vistas panorámicas desde un mirador del Parque Nacional de Cabañeros."
         }

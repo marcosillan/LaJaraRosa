@@ -11,7 +11,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// 🔥 ESTILOS OBLIGATORIOS DEL LIGHTBOX (Esto evitaba que se viera bien)
+// Estilos obligatorios del Lightbox
 import "yet-another-react-lightbox/styles.css";
 
 import "./ImageCarousel.module.css";
@@ -30,6 +30,7 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
     const [open, setOpen] = useState(false);
     const [index, setIndex] = useState(0);
 
+    // Solo cargamos la calidad máxima cuando abren el Lightbox
     const slides = images.map((src) => ({ src }));
 
     const handleImageClick = (i: number) => {
@@ -44,36 +45,40 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
                 navigation
                 pagination={{ clickable: true }}
                 loop={false}
-                className="w-full rounded-lg mb-4"
+                lazyPreloadPrevNext={1}
+                className="w-full rounded-xl mb-4 overflow-hidden shadow-lg"
             >
                 {images.map((src, i) => (
                     <SwiperSlide key={i}>
                         <div 
                             onClick={() => handleImageClick(i)}
-                            className="relative w-full aspect-video cursor-pointer overflow-hidden rounded-lg"
+                            className="img-container aspect-video"
                         >
                             <Image
                                 src={src}
                                 alt={`${alt} - Imagen ${index + 1}`}
-                                width={1200}
-                                height={675}
-                                priority={i === 0}
+                                width={1000} // Aumentamos a 1000 para mayor nitidez en pantallas HD
+                                height={562}
+                                priority={i === 0} 
                                 loading={i === 0 ? "eager" : "lazy"}
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                                quality={70}
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                className="w-full h-full object-cover img-vibrante cursor-pointer"
+                                quality={75} // Subimos al 75% para un equilibrio óptimo calidad/peso
                             />
                         </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
 
-            <Lightbox
-                open={open}
-                close={() => setOpen(false)}
-                slides={slides}
-                index={index}
-            />
+            {open && (
+                <Lightbox
+                    open={open}
+                    close={() => setOpen(false)}
+                    slides={slides}
+                    index={index}
+                    styles={{ container: { backgroundColor: "rgba(0, 0, 0, .95)" } }}
+                />
+            )}
         </>
     );
 }

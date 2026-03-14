@@ -6,11 +6,8 @@
 
 @layer base {
     body {
-        background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('/images/fondo.webp');
-        background-size: cover;
-        background-position: center 30%;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
+        /* Eliminamos el fondo de aquí para evitar el error en móviles */
+        @apply bg-gris-claro;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -37,6 +34,23 @@
 }
 
 @layer components {
+    /* Mejora de imágenes global AVANZADA (MODO DÍA) */
+    .img-vibrante {
+        filter: brightness(1.12) contrast(1.05) saturate(1.2);
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        image-rendering: -webkit-optimize-contrast;
+    }
+
+    .img-vibrante:hover {
+        filter: brightness(1.18) contrast(1.1) saturate(1.35);
+        transform: scale(1.03);
+    }
+
+    .img-container {
+        @apply relative overflow-hidden rounded-xl;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
     /* Botones*/
     .btn-primary {
         @apply inline-block bg-rosa text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg;

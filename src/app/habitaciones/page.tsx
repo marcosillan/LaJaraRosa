@@ -40,25 +40,51 @@ export default function Habitaciones() {
         },
         {
             nombre: "Patio y Exteriores",
-            imagenes: ["/images/PATIO_EXTERIORES/patio (4).jpg","/images/PATIO_EXTERIORES/piscina.jpg","/images/PATIO_EXTERIORES/patio (6).jpg","/images/PATIO_EXTERIORES/patio (2).jpg","/images/PATIO_EXTERIORES/patio (3).jpg","/images/PATIO_EXTERIORES/barbacoa.jpg", "/images/PATIO_EXTERIORES/barbacoa1.jpg", "/images/PATIO_EXTERIORES/fachada (4).jpg", "/images/PATIO_EXTERIORES/fachada (2).jpg" ],
+            imagenes: [
+                "/images/PATIO_EXTERIORES/patio (4).jpg",
+                "/images/PATIO_EXTERIORES/piscina.jpg",
+                "/images/PATIO_EXTERIORES/tumbonas.jpg",
+                "/images/PATIO_EXTERIORES/barbacoa.jpg",
+                "/images/PATIO_EXTERIORES/patio (2).jpg",
+                "/images/PATIO_EXTERIORES/patio (3).jpg",
+                "/images/PATIO_EXTERIORES/fachada2.jpg",
+                "/images/PATIO_EXTERIORES/fachada (4).jpg"
+            ],
             descripcion: "Disfruta de nuestra piscina en verano, una barbacoa al aire libre y una zona chill-out para relajarte bajo el sol de los Montes de Toledo.",
             alt: "Patio exterior con piscina, barbacoa y zona chill-out en La Jara Rosa."
         },
         {
             nombre: "Habitación El Olivar",
-            imagenes: ["/images/HABITACION_CABECERO/cabecero1.jpg", "/images/HABITACION_CABECERO/cabecero3.jpg", "/images/HABITACION_CABECERO/cabecero4.jpg", "/images/HABITACION_CABECERO/cabecero5.jpg", "/images/HABITACION_CABECERO/cabecero5.jpg","/images/HABITACION_CABECERO/cabecero6.jpg","/images/HABITACION_CABECERO/cabecero7.jpg","/images/HABITACION_CABECERO/b_cabecero1.jpg","/images/HABITACION_CABECERO/b_cabecero2.jpg"],
+            imagenes: [
+                "/images/HABITACION_CABECERO/cabecero1.jpg", 
+                "/images/HABITACION_CABECERO/cabecero3.jpg", 
+                "/images/HABITACION_CABECERO/cabecero.jpg",
+                "/images/HABITACION_CABECERO/cabecero7.jpg",
+                "/images/HABITACION_CABECERO/b_cabecero2.jpg"
+            ],
             descripcion: "Una habitación elegante con un cabecero de madera natural y todas las comodidades para una estancia perfecta.",
             alt: "Habitación El Olivar con cabecero de madera natural y vistas a la naturaleza."
         },
         {
             nombre: "Habitación El Encinar",
-            imagenes: ["/images/HABITACION_GRIS/gris1.jpg", "/images/HABITACION_GRIS/gris2.jpg", "/images/HABITACION_GRIS/gris3.jpg", "/images/HABITACION_GRIS/gris4.jpg", "/images/HABITACION_GRIS/gris5.jpg","/images/HABITACION_GRIS/b_gris1.jpg","/images/HABITACION_GRIS/b_gris2.jpg"],
+            imagenes: [
+                "/images/HABITACION_GRIS/gris1.jpg", 
+                "/images/HABITACION_GRIS/gris3.jpg", 
+                "/images/HABITACION_GRIS/gris.jpg",
+                "/images/HABITACION_GRIS/gris4.jpg", 
+                "/images/HABITACION_GRIS/b_gris2.jpg"
+            ],
             descripcion: "Decorada en tonos grises, esta habitación es un remanso de paz y tranquilidad.",
             alt: "Habitación El Encinar con decoración en tonos grises y baño privado."
         },
         {
             nombre: "Habitación El Almendro",
-            imagenes: ["/images/HABITACION_MADERA/madera3.jpg", "/images/HABITACION_MADERA/madera2.jpg", "/images/HABITACION_MADERA/madera1.jpg","/images/HABITACION_MADERA/madera6.jpg","/images/HABITACION_MADERA/bmadera1.jpg","/images/HABITACION_MADERA/bmadera2.jpg"],
+            imagenes: [
+                "/images/HABITACION_MADERA/madera3.jpg",
+                "/images/HABITACION_MADERA/madera.jpg",
+                "/images/HABITACION_MADERA/madera (2).jpg",
+                "/images/HABITACION_MADERA/bmadera2.jpg"
+            ],
             descripcion: "Los detalles en madera y su ambiente acogedor la convierten en la opción ideal para desconectar.",
             alt: "Habitación El Almendro con detalles en madera y ambiente acogedor."
         }
