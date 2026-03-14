@@ -4,6 +4,7 @@ import ImageCarousel from "@/components/ImageCarousel";
 import LazyCarousel from "@/components/LazyCarousel";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
+import { FaWhatsapp, FaHome, FaEye } from "react-icons/fa";
 
 const AnimatedCard = ({ i, children }: { i: number; children: React.ReactNode }) => {
     const { ref, inView } = useInView({
@@ -26,7 +27,7 @@ export default function Home() {
     const habitaciones = [
         {
             nombre: "El Olivar",
-            imagenes: ["/images/HABITACION_CABECERO/cabecero1.jpg", "/images/HABITACION_CABECERO/cabecero3.jpg", "/images/HABITACION_CABECERO/cabecero.jpg", "/images/HABITACION_CABECERO/cabecero7.jpg", "/images/HABITACION_CABECERO/b_cabecero2.jpg"],
+            imagenes: ["/images/HABITACION_CABECERO/cabecero1.jpg", "/images/HABITACION_CABECERO/cabecero3.jpg", "/images/HABITACION_CABECERO/cabecero.jpg", "/images/HABITACION_CABECERO/cabecero5.jpg", "/images/HABITACION_CABECERO/cabecero7.jpg", "/images/HABITACION_CABECERO/b_cabecero2.jpg"],
             alt: "Carrusel de imágenes de la Habitación El Olivar en la casa rural La Jara Rosa, Los Navalucillos."
         },
         {
@@ -69,7 +70,7 @@ export default function Home() {
         {
             nombre: "Rocigalgo",
             imagenes: ["/images/rocigalgo/rocigalgo3.jpg", "/images/rocigalgo/rocigalgo.jpg", "/images/rocigalgo/mpgrocigr.jpg"],
-            alt: "Vistas desde el pico Rocigalgo, el punto más alto del Parque Nacional de Cabañeros."
+            alt: "Vistas desde el pico Rocigalgo, el más alto de los Montes de Toledo."
         },
         {
             nombre: "La Encina Milenaria",
@@ -86,20 +87,34 @@ export default function Home() {
                 <h2 className="text-base sm:text-lg md:text-xl text-white mb-6">
                     Disfruta de un alojamiento moderno y confortable, rodeado de la naturaleza de los Montes de Toledo.
                 </h2>
-                <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-4">
+                
+                {/* BOTONES UNIFICADOS */}
+                <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4">
                     <a
                         href="https://wa.me/679840695"
-                        className="inline-block px-4 py-2 text-sm sm:px-6 sm:py-3 bg-verde text-white rounded hover:bg-verde-claro transition"
+                        className="btn-hero bg-verde text-white hover:bg-verde-claro"
                     >
-                        Contacta por WhatsApp
+                        <FaWhatsapp className="text-xl" />
+                        <span>WhatsApp</span>
                     </a>
                     <Link
                         href="/habitaciones"
-                        className="inline-block px-4 py-2 text-sm sm:px-6 sm:py-3 bg-white text-marron rounded hover:bg-verde-pistacho transition"
+                        className="btn-hero bg-white text-marron hover:bg-verde-pistacho"
                     >
-                        Ver el Alojamiento
+                        <FaEye className="text-xl" />
+                        <span>Ver Alojamiento</span>
                     </Link>
+                    <a
+                        href="https://www.escapadarural.com/casa-rural/toledo/la-jara-rosa"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-hero bg-rosa-suave text-marron-oscuro hover:bg-rosa"
+                    >
+                        <FaHome className="text-xl" />
+                        <span>Escapada Rural</span>
+                    </a>
                 </div>
+
                 <div className="mt-4 text-xs sm:text-sm md:text-base text-white text-center">
                     <p>- Esta casa está preparada para 6-8 personas</p>
                     <p>- Pet Friendly (consultar antes de reservar)</p>
