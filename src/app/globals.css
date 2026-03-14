@@ -1,17 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&family=Dancing+Script:wght@700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+    :root {
+        --verde-principal: #2F855A;
+        --verde-claro: #68D391;
+        --gris-claro: #F7FAFC;
+        --gris-texto: #4A5568;
+    }
+
     body {
-        /* Eliminamos el fondo de aquí para evitar el error en móviles */
+        font-family: var(--font-inter), sans-serif;
         @apply bg-gris-claro;
     }
 
     h1, h2, h3, h4, h5, h6 {
-        @apply font-heading text-gris-texto;
+        font-family: var(--font-poppins), sans-serif;
+        @apply text-gris-texto;
+    }
+
+    .font-script {
+        font-family: var(--font-script), cursive;
     }
 
     a {
@@ -25,11 +35,11 @@
     /* Swiper Customization */
     .swiper-button-next,
     .swiper-button-prev {
-        color: #2F855A !important;
+        color: var(--verde-principal) !important;
     }
 
     .swiper-pagination-bullet-active {
-        background-color: #2F855A !important;
+        background-color: var(--verde-principal) !important;
     }
 }
 

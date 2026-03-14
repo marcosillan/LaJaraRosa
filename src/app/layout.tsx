@@ -2,6 +2,27 @@ import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Background from "../components/Background";
+import { Inter, Poppins, Dancing_Script } from "next/font/google";
+
+// Configuración de fuentes optimizadas
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const poppins = Poppins({
+  weight: ["600", "700"],
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  display: "swap",
+});
+
+const dancingScript = Dancing_Script({
+  subsets: ["latin"],
+  variable: "--font-script",
+  display: "swap",
+});
 
 export const metadata = {
     title: "La Jara Rosa-Los Navalucillos",
@@ -10,7 +31,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="es">
+        <html lang="es" className={`${inter.variable} ${poppins.variable} ${dancingScript.variable}`}>
             <body className="bg-gris-claro text-gris-texto font-sans flex flex-col min-h-screen relative">
                 <Background />
                 <Navbar />
