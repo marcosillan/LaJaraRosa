@@ -11,11 +11,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// Estilos obligatorios del Lightbox
+// Estilos de Lightbox (Carga segura)
 import "yet-another-react-lightbox/styles.css";
 
-import "./ImageCarousel.module.css";
-
+// Cargamos el Lightbox de forma dinámica (JS pesado bajo demanda)
 const Lightbox = dynamic(
     () => import("yet-another-react-lightbox"),
     { ssr: false }
@@ -30,7 +29,6 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
     const [open, setOpen] = useState(false);
     const [index, setIndex] = useState(0);
 
-    // Solo cargamos la calidad máxima cuando abren el Lightbox
     const slides = images.map((src) => ({ src }));
 
     const handleImageClick = (i: number) => {
@@ -46,7 +44,6 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
                 pagination={{ clickable: true }}
                 loop={false}
                 lazyPreloadPrevNext={1}
-                // Reducimos el margen inferior de mb-4 a mb-1 para acercar el texto
                 className="w-full rounded-xl mb-1 overflow-hidden shadow-lg"
             >
                 {images.map((src, i) => (
@@ -58,13 +55,12 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
                             <Image
                                 src={src}
                                 alt={`${alt} - Imagen ${index + 1}`}
-                                width={1000} 
-                                height={562}
-                                priority={i === 0} 
-                                loading={i === 0 ? "eager" : "lazy"}
+                                width={800} 
+                                height={450}
+                                loading="lazy"
                                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                 className="w-full h-full object-cover img-vibrante cursor-pointer"
-                                quality={75}
+                                quality={65}
                             />
                         </div>
                     </SwiperSlide>

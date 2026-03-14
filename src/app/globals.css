@@ -12,7 +12,7 @@
 
     body {
         font-family: var(--font-inter), sans-serif;
-        @apply bg-gris-claro;
+        @apply bg-gris-claro antialiased;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -23,98 +23,40 @@
     .font-script {
         font-family: var(--font-script), cursive;
     }
+}
 
-    a {
-        @apply transition-colors duration-300;
+@layer components {
+    /* Botón de acción principal */
+    .btn-hero {
+        @apply flex items-center justify-center gap-2 w-full sm:w-auto px-4 py-2 text-sm sm:px-6 sm:py-3 font-semibold rounded-lg transition-all duration-300 shadow-sm hover:shadow-md;
     }
 
-    button {
-        @apply transition-all duration-300;
+    /* Mejora de imágenes */
+    .img-vibrante {
+        filter: brightness(1.12) contrast(1.05) saturate(1.2);
+        transition: all 0.5s ease;
     }
 
-    /* Swiper Customization */
+    .img-container {
+        @apply relative overflow-hidden rounded-xl bg-black/5;
+    }
+
+    /* Estilos de Swiper consolidados aquí para evitar bloqueos extras */
     .swiper-button-next,
     .swiper-button-prev {
         color: var(--verde-principal) !important;
+        transform: scale(0.7);
     }
 
     .swiper-pagination-bullet-active {
         background-color: var(--verde-principal) !important;
     }
-}
 
-@layer components {
-    /* Botón de acción principal (Hero Section) */
-    .btn-hero {
-        @apply flex items-center justify-center gap-2 w-full sm:w-auto px-4 py-2 text-sm sm:px-6 sm:py-3 font-semibold rounded-lg transition-all duration-300 shadow-sm hover:shadow-md;
-    }
-
-    /* Mejora de imágenes global AVANZADA (MODO DÍA) */
-    .img-vibrante {
-        filter: brightness(1.12) contrast(1.05) saturate(1.2);
-        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        image-rendering: -webkit-optimize-contrast;
-    }
-
-    .img-vibrante:hover {
-        filter: brightness(1.18) contrast(1.1) saturate(1.35);
-        transform: scale(1.03);
-    }
-
-    .img-container {
-        @apply relative overflow-hidden rounded-xl;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    }
-
-    /* Botones*/
-    .btn-primary {
-        @apply inline-block bg-rosa text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg;
-        @apply transition-transform transform hover:scale-105 hover:bg-rosa;
-    }
-
-    .btn-secondary {
-        @apply bg-rosa-suave text-gris-texto px-5 py-2 rounded-lg font-medium hover:bg-rosa;
-    }
-
-    /* Tarjetas */
-    .card {
-        @apply bg-white rounded-2xl shadow-xl overflow-hidden;
-        @apply transition-transform duration-300 transform hover:-translate-y-2;
-        @apply border border-gris-medio/30;
-    }
-
-    .card-title {
-        @apply text-2xl font-bold font-heading text-verde;
-    }
-
-    .card-body {
-        @apply p-6;
-    }
-
-    /* Formularios */
-    .form-input {
-        @apply w-full border-2 border-gray-200 p-3 rounded-lg;
-        @apply focus:outline-none focus:border-verde transition-colors;
-    }
-
-    .form-label {
-        @apply block text-lg font-semibold mb-2 text-gris-texto;
-    }
-
-    /* Títulos de Sección */
-    .section-title {
-        @apply text-4xl font-bold font-heading text-verde;
-    }
-
-    .section-subtitle {
-        @apply mt-4 text-lg max-w-2xl mx-auto text-gris-texto;
-    }
-
-    /* Animaciones */
+    /* Animaciones de entrada */
     .fade-in {
         opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        transform: translateY(10px);
+        transition: opacity 0.4s ease-out, transform 0.4s ease-out;
     }
 
     .fade-in-visible {
