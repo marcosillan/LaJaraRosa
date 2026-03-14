@@ -44,7 +44,6 @@ export default function Habitaciones() {
                 "/images/PATIO_EXTERIORES/patio (4).jpg",
                 "/images/PATIO_EXTERIORES/piscina.jpg",
                 "/images/PATIO_EXTERIORES/tumbonas.jpg",
-                "/images/PATIO_EXTERIORES/barbacoa.jpg",
                 "/images/PATIO_EXTERIORES/patio (2).jpg",
                 "/images/PATIO_EXTERIORES/patio (3).jpg",
                 "/images/PATIO_EXTERIORES/fachada2.jpg",
@@ -56,11 +55,10 @@ export default function Habitaciones() {
         {
             nombre: "Habitación El Olivar",
             imagenes: [
-                "/images/HABITACION_CABECERO/cabecero.jpg",
                 "/images/HABITACION_CABECERO/cabecero1.jpg", 
                 "/images/HABITACION_CABECERO/cabecero3.jpg", 
+                "/images/HABITACION_CABECERO/cabecero.jpg",
                 "/images/HABITACION_CABECERO/cabecero5.jpg", 
-                "/images/HABITACION_CABECERO/cabecero5.jpg",
                 "/images/HABITACION_CABECERO/cabecero7.jpg",
                 "/images/HABITACION_CABECERO/b_cabecero2.jpg"
             ],
@@ -72,6 +70,7 @@ export default function Habitaciones() {
             imagenes: [
                 "/images/HABITACION_GRIS/gris1.jpg", 
                 "/images/HABITACION_GRIS/gris3.jpg", 
+                "/images/HABITACION_GRIS/gris.jpg",
                 "/images/HABITACION_GRIS/gris4.jpg", 
                 "/images/HABITACION_GRIS/b_gris2.jpg"
             ],
@@ -80,7 +79,13 @@ export default function Habitaciones() {
         },
         {
             nombre: "Habitación El Almendro",
-            imagenes: ["/images/HABITACION_MADERA/madera3.jpg", "/images/HABITACION_MADERA/madera2.jpg", "/images/HABITACION_MADERA/bmadera2.jpg"],
+            imagenes: [
+                "/images/HABITACION_MADERA/madera3.jpg", 
+                "/images/HABITACION_MADERA/madera2.jpg", 
+                "/images/HABITACION_MADERA/madera.jpg",
+                "/images/HABITACION_MADERA/madera (2).jpg",
+                "/images/HABITACION_MADERA/bmadera2.jpg"
+            ],
             descripcion: "Los detalles en madera y su ambiente acogedor la convierten en la opción ideal para desconectar.",
             alt: "Habitación El Almendro con detalles en madera y ambiente acogedor."
         }

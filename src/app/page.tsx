@@ -26,17 +26,17 @@ export default function Home() {
     const habitaciones = [
         {
             nombre: "El Olivar",
-            imagenes: ["/images/HABITACION_CABECERO/cabecero1.jpg", "/images/HABITACION_CABECERO/cabecero3.jpg", "/images/HABITACION_CABECERO/cabecero4.jpg", "/images/HABITACION_CABECERO/cabecero5.jpg", "/images/HABITACION_CABECERO/cabecero5.jpg","/images/HABITACION_CABECERO/cabecero6.jpg","/images/HABITACION_CABECERO/cabecero7.jpg","/images/HABITACION_CABECERO/b_cabecero1.jpg","/images/HABITACION_CABECERO/b_cabecero2.jpg"],
+            imagenes: ["/images/HABITACION_CABECERO/cabecero1.jpg", "/images/HABITACION_CABECERO/cabecero3.jpg", "/images/HABITACION_CABECERO/cabecero.jpg", "/images/HABITACION_CABECERO/cabecero7.jpg", "/images/HABITACION_CABECERO/b_cabecero2.jpg"],
             alt: "Carrusel de imágenes de la Habitación El Olivar en la casa rural La Jara Rosa, Los Navalucillos."
         },
         {
             nombre: "El Encinar",
-            imagenes: ["/images/HABITACION_GRIS/gris1.jpg", "/images/HABITACION_GRIS/gris2.jpg", "/images/HABITACION_GRIS/gris3.jpg", "/images/HABITACION_GRIS/gris4.jpg", "/images/HABITACION_GRIS/gris5.jpg","/images/HABITACION_GRIS/b_gris1.jpg","/images/HABITACION_GRIS/b_gris2.jpg"],
+            imagenes: ["/images/HABITACION_GRIS/gris1.jpg", "/images/HABITACION_GRIS/gris3.jpg", "/images/HABITACION_GRIS/gris.jpg", "/images/HABITACION_GRIS/gris4.jpg", "/images/HABITACION_GRIS/b_gris2.jpg"],
             alt: "Carrusel de imágenes de la Habitación El Encinar, con baño privado y decoración moderna."
         },
         {
             nombre: "El Almendro",
-            imagenes: ["/images/HABITACION_MADERA/madera3.jpg", "/images/HABITACION_MADERA/madera2.jpg", "/images/HABITACION_MADERA/madera1.jpg","/images/HABITACION_MADERA/madera6.jpg","/images/HABITACION_MADERA/bmadera1.jpg","/images/HABITACION_MADERA/bmadera2.jpg"],
+            imagenes: ["/images/HABITACION_MADERA/madera3.jpg", "/images/HABITACION_MADERA/madera2.jpg", "/images/HABITACION_MADERA/madera.jpg", "/images/HABITACION_MADERA/madera (2).jpg", "/images/HABITACION_MADERA/bmadera2.jpg"],
             alt: "Carrusel de imágenes de la Habitación El Almendro, con detalles en madera y ambiente acogedor."
         }
     ];
@@ -50,7 +50,7 @@ export default function Home() {
         },
         {
             nombre: "Patio y Exteriores",
-            imagenes: ["/images/PATIO_EXTERIORES/patio (4).jpg","/images/PATIO_EXTERIORES/piscina.jpg","/images/PATIO_EXTERIORES/patio (6).jpg","/images/PATIO_EXTERIORES/patio (2).jpg","/images/PATIO_EXTERIORES/patio (3).jpg","/images/PATIO_EXTERIORES/barbacoa.jpg", "/images/PATIO_EXTERIORES/barbacoa1.jpg", "/images/PATIO_EXTERIORES/fachada (4).jpg", "/images/PATIO_EXTERIORES/fachada (2).jpg" ],
+            imagenes: ["/images/PATIO_EXTERIORES/patio (4).jpg", "/images/PATIO_EXTERIORES/piscina.jpg", "/images/PATIO_EXTERIORES/tumbonas.jpg", "/images/PATIO_EXTERIORES/patio (2).jpg", "/images/PATIO_EXTERIORES/patio (3).jpg", "/images/PATIO_EXTERIORES/fachada2.jpg", "/images/PATIO_EXTERIORES/fachada (4).jpg"],
             descripcion: "Disfruta de nuestra piscina en verano, una barbacoa al aire libre y una zona chill-out para relajarte.",
             alt: "Patio exterior de La Jara Rosa con piscina, barbacoa y zona chill-out en Los Navalucillos."
         }
@@ -58,7 +58,7 @@ export default function Home() {
     const rutas = [
         {
             nombre: "El Chorro",
-            imagenes: [ "/images/chorro/chorro2.jpg", "/images/chorro/chorro3.jpg", "/images/chorro/chorro4.jpg"],
+            imagenes: ["/images/chorro/chorro2.jpg", "/images/chorro/chorro3.jpg", "/images/chorro/chorro4.jpg"],
             alt: "Imágenes de la ruta de senderismo a la cascada de El Chorro, cerca de Los Navalucillos."
         },
         {
@@ -73,7 +73,7 @@ export default function Home() {
         },
         {
             nombre: "La Encina Milenaria",
-            imagenes: ["/images/encina/49468.jpg", "/images/encina/encina.jpeg", "/images/encina/ruta-encina-centenaria-1.jpg", "/images/encina/rana-de-cabaneros-en.jpg"],
+            imagenes: ["/images/encina/49468.jpg", "/images/encina/ruta-encina-centenaria-1.jpg", "/images/encina/rana-de-cabaneros-en.jpg"],
             alt: "Imágenes de la Encina Milenaria, un árbol monumental en la zona de Los Navalucillos."
         }
     ];
