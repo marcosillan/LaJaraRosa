@@ -6,9 +6,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import Image from "next/image";
 
+// Estilos de Swiper
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
+// 🔥 ESTILOS OBLIGATORIOS DEL LIGHTBOX (Esto evitaba que se viera bien)
+import "yet-another-react-lightbox/styles.css";
 
 import "./ImageCarousel.module.css";
 
@@ -28,6 +32,11 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
 
     const slides = images.map((src) => ({ src }));
 
+    const handleImageClick = (i: number) => {
+        setIndex(i);
+        setOpen(true);
+    };
+
     return (
         <>
             <Swiper
@@ -38,31 +47,33 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
                 className="w-full rounded-lg mb-4"
             >
                 {images.map((src, i) => (
-                    <SwiperSlide key={i} onClick={() => { setIndex(i); setOpen(true); }}>
-                        <Image
-                            src={src}
-                            alt={`${alt} - Imagen ${i + 1}`}
-                            width={1600}
-                            height={900}
-                            priority={i === 0}                 // 🔥 SOLO LA PRIMERA
-                            loading={i === 0 ? "eager" : "lazy"}
-                            fetchPriority={i === 0 ? "high" : "auto"}
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                            className="w-full aspect-video object-cover cursor-pointer"
-                            quality={60}
-                        />
+                    <SwiperSlide key={i}>
+                        <div 
+                            onClick={() => handleImageClick(i)}
+                            className="relative w-full aspect-video cursor-pointer overflow-hidden rounded-lg"
+                        >
+                            <Image
+                                src={src}
+                                alt={`${alt} - Imagen ${index + 1}`}
+                                width={1200}
+                                height={675}
+                                priority={i === 0}
+                                loading={i === 0 ? "eager" : "lazy"}
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                quality={70}
+                            />
+                        </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
 
-            {open && (
-                <Lightbox
-                    open={open}
-                    close={() => setOpen(false)}
-                    slides={slides}
-                    index={index}
-                />
-            )}
+            <Lightbox
+                open={open}
+                close={() => setOpen(false)}
+                slides={slides}
+                index={index}
+            />
         </>
     );
 }
