@@ -12,12 +12,11 @@ interface LazyCarouselProps {
 export default function LazyCarousel({ images, alt }: LazyCarouselProps) {
     const { ref, inView } = useInView({
         triggerOnce: true,
-        rootMargin: "800px 0px", // Margen mucho más amplio para que ya esté cargado al llegar
+        rootMargin: "800px 0px", 
     });
 
     return (
-        <div ref={ref} className="min-h-[250px]">
-            {/* Renderizamos siempre la estructura, pero el contenido real se activa por inView o por carga nativa de Next.js */}
+        <div ref={ref}>
             <ImageCarousel images={images} alt={alt} />
         </div>
     );

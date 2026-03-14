@@ -46,7 +46,8 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
                 pagination={{ clickable: true }}
                 loop={false}
                 lazyPreloadPrevNext={1}
-                className="w-full rounded-xl mb-4 overflow-hidden shadow-lg"
+                // Reducimos el margen inferior de mb-4 a mb-1 para acercar el texto
+                className="w-full rounded-xl mb-1 overflow-hidden shadow-lg"
             >
                 {images.map((src, i) => (
                     <SwiperSlide key={i}>
@@ -57,13 +58,13 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
                             <Image
                                 src={src}
                                 alt={`${alt} - Imagen ${index + 1}`}
-                                width={1000} // Aumentamos a 1000 para mayor nitidez en pantallas HD
+                                width={1000} 
                                 height={562}
                                 priority={i === 0} 
                                 loading={i === 0 ? "eager" : "lazy"}
                                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                 className="w-full h-full object-cover img-vibrante cursor-pointer"
-                                quality={75} // Subimos al 75% para un equilibrio óptimo calidad/peso
+                                quality={75}
                             />
                         </div>
                     </SwiperSlide>
