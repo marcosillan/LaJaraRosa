@@ -99,7 +99,7 @@ export default function Home() {
                     </a>
                     <Link
                         href="/habitaciones"
-                        className="btn-hero bg-white text-marron hover:bg-verde-pistacho"
+                        className="btn-hero bg-white text-marron hover:bg-rosa-suave"
                     >
                         <FaEye className="text-xl" />
                         <span>Ver Alojamiento</span>
@@ -108,7 +108,7 @@ export default function Home() {
                         href="https://www.escapadarural.com/casa-rural/toledo/la-jara-rosa"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-hero bg-rosa-suave text-marron-oscuro hover:bg-rosa"
+                        className="btn-hero bg-marron text-white hover:bg-marron-oscuro"
                     >
                         <FaHome className="text-xl" />
                         <span>Escapada Rural</span>
