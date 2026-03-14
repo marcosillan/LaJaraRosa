@@ -1,33 +1,24 @@
+"use client";
+
 import { useInView } from "react-intersection-observer";
 import ImageCarousel from "@/components/ImageCarousel";
-
 
 interface LazyCarouselProps {
     images: string[];
     alt: string;
-    maxMobile?: number; // opcional, por si quieres cambiarlo por sección
+    maxMobile?: number; 
 }
 
-export default function LazyCarousel({ images, alt, maxMobile = 3 }: LazyCarouselProps) {
+export default function LazyCarousel({ images, alt }: LazyCarouselProps) {
     const { ref, inView } = useInView({
         triggerOnce: true,
-        rootMargin: "200px",
+        rootMargin: "800px 0px", // Margen mucho más amplio para que ya esté cargado al llegar
     });
 
-    const filteredImages = limitImagesForMobile(images, maxMobile);
-
     return (
-        <div ref={ref}>
-            {inView ? <ImageCarousel images={filteredImages} alt={alt} /> : null}
+        <div ref={ref} className="min-h-[250px]">
+            {/* Renderizamos siempre la estructura, pero el contenido real se activa por inView o por carga nativa de Next.js */}
+            <ImageCarousel images={images} alt={alt} />
         </div>
     );
 }
-
-
-export function limitImagesForMobile(images: string[], maxMobile: number) {
-    if (typeof window !== "undefined" && window.innerWidth <= 768) {
-        return images.slice(0, maxMobile);
-    }
-    return images;
-}
-
