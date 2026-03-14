@@ -58,7 +58,6 @@ export default function Habitaciones() {
                 "/images/HABITACION_CABECERO/cabecero1.jpg", 
                 "/images/HABITACION_CABECERO/cabecero3.jpg", 
                 "/images/HABITACION_CABECERO/cabecero.jpg",
-                "/images/HABITACION_CABECERO/cabecero5.jpg", 
                 "/images/HABITACION_CABECERO/cabecero7.jpg",
                 "/images/HABITACION_CABECERO/b_cabecero2.jpg"
             ],
@@ -80,8 +79,7 @@ export default function Habitaciones() {
         {
             nombre: "Habitación El Almendro",
             imagenes: [
-                "/images/HABITACION_MADERA/madera3.jpg", 
-                "/images/HABITACION_MADERA/madera2.jpg", 
+                "/images/HABITACION_MADERA/madera3.jpg",
                 "/images/HABITACION_MADERA/madera.jpg",
                 "/images/HABITACION_MADERA/madera (2).jpg",
                 "/images/HABITACION_MADERA/bmadera2.jpg"

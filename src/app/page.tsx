@@ -36,7 +36,7 @@ export default function Home() {
         },
         {
             nombre: "El Almendro",
-            imagenes: ["/images/HABITACION_MADERA/madera3.jpg", "/images/HABITACION_MADERA/madera2.jpg", "/images/HABITACION_MADERA/madera.jpg", "/images/HABITACION_MADERA/madera (2).jpg", "/images/HABITACION_MADERA/bmadera2.jpg"],
+            imagenes: ["/images/HABITACION_MADERA/madera3.jpg", "/images/HABITACION_MADERA/madera.jpg", "/images/HABITACION_MADERA/madera (2).jpg", "/images/HABITACION_MADERA/bmadera2.jpg"],
             alt: "Carrusel de imágenes de la Habitación El Almendro, con detalles en madera y ambiente acogedor."
         }
     ];
