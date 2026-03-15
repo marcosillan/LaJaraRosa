@@ -11,14 +11,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// Estilos de Lightbox (Carga segura)
+// Estilos de Lightbox
 import "yet-another-react-lightbox/styles.css";
 
-// Cargamos el Lightbox de forma dinámica (JS pesado bajo demanda)
-const Lightbox = dynamic(
-    () => import("yet-another-react-lightbox"),
-    { ssr: false }
-);
+const Lightbox = dynamic(() => import("yet-another-react-lightbox"), { ssr: false });
 
 interface ImageCarouselProps {
     images: string[];
@@ -36,8 +32,14 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
         setOpen(true);
     };
 
+    // Define los colores personalizados para Swiper
+    const swiperStyles = {
+        "--swiper-navigation-color": "#FAD7E8", // Rosa Suave
+        "--swiper-pagination-color": "#FAD7E8", // Rosa Suave
+    } as React.CSSProperties;
+
     return (
-        <>
+        <div style={swiperStyles}>
             <Swiper
                 modules={[Navigation, Pagination]}
                 navigation
@@ -76,6 +78,6 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
                     styles={{ container: { backgroundColor: "rgba(0, 0, 0, .95)" } }}
                 />
             )}
-        </>
+        </div>
     );
 }
