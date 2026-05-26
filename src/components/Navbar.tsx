@@ -36,6 +36,8 @@ export default function Navbar() {
                     <li><Link href="/habitaciones" className="hover:text-verde-claro text-white">Alojamiento</Link></li>
                     <li><Link href="/entorno" className="hover:text-verde-claro text-white">Entorno</Link></li>
                     <li><Link href="/contacto" className="hover:text-verde-claro text-white">Contacto</Link></li>
+                    <li><Link href="/opiniones" className="hover:text-verde-claro text-white">Opiniones</Link></li>
+
                 </ul>
 
                 {/* BOTONES DE ACCIÓN RÁPIDA */}
@@ -89,6 +91,8 @@ export default function Navbar() {
                     <Link href="/habitaciones" className="block text-white hover:text-verde-claro" onClick={() => setOpen(false)}>Alojamiento</Link>
                     <Link href="/entorno" className="block text-white hover:text-verde-claro" onClick={() => setOpen(false)}>Entorno</Link>
                     <Link href="/contacto" className="block text-white hover:text-verde-claro" onClick={() => setOpen(false)}>Contacto</Link>
+                    <Link href="/opiniones" className="block text-white hover:text-verde-claro" onClick={() => setOpen(false)}>Opiniones</Link>
+
                 </div>
             )}
         </header>

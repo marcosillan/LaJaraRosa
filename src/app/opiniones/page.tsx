@@ -1,41 +1,55 @@
+"use client";
+
+import OpinionCard from "@/components/OpinionCard";
+import { useInView } from "react-intersection-observer";
+
+// Componente para animar la entrada de cada tarjeta de opinión
+const AnimatedOpinionCard = ({ review, i }: { review: any; i: number }) => {
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
+
+    return (
+        <div
+            ref={ref}
+            className={`fade-in ${inView ? "fade-in-visible" : ""}`}
+            style={{ transitionDelay: `${i * 100}ms` }}
+        >
+            <OpinionCard nombre={review.nombre} comentario={review.comentario} rating={review.rating} />
+        </div>
+    );
+};
+
 export default function Opiniones() {
     const reviews = [
         {
-            nombre: "Ana García",
-            comentario: "Ha sido una estancia maravillosa. La casa es preciosa, moderna y no le falta detalle. El entorno es espectacular, perfecto para desconectar. Volveremos sin duda.",
+            nombre: "",
+            comentario: "Una maravilla de casa, todo nuevo y súper limpio. Está en muy buen sitio en el pueblo, tiene todo lo necesario y la anfitriona es muy amable y atenta. Para repetir sin duda.",
             rating: 5,
         },
         {
-            nombre: "Luis Pérez",
-            comentario: "Un lugar increíble para ir con niños. La casa es muy cómoda y el jardín es perfecto para que jueguen. Hemos disfrutado de la naturaleza y la tranquilidad. Totalmente recomendable.",
+            nombre: "",
+            comentario: "La casa es espectacular y preciosa, esta todo nuevo, se nota. Es un sitio tranquilo y precioso. Los dueños encantadores también. Fuimos 8 personas, fue una experiencia 10/10 que queremos volveremos a repetir sin duda.",
             rating: 5,
         },
         {
-            nombre: "Marta Sánchez",
-            comentario: "La Jara Rosa es un refugio de paz. La decoración es exquisita y el confort es máximo. Ideal para una escapada romántica.",
+            nombre: "",
+            comentario: "La casa es una pasada! Yo llevo alojandome muchos años en casas rurales por toda España y esta es sin duda una de las mejores. No le falta de nada, muy limpia, confortable, con mucha luz, las camas muy cómodas, con todo el menaje de cocina, hasta te dejan cosas para desayunar, y en los baños amenities y secador en cada baño, que por cierto , hay un baño completo en cada habitación y eso se agradece muchísimo; yo valoro mucho la privacidad aunque compartas casa con la familia.",
             rating: 5,
         },
+
     ];
 
     return (
-        <div className="space-y-12">
-            <div className="text-center">
-                <h2 className="section-title text-marron">Qué dicen nuestros huéspedes</h2>
-                <p className="section-subtitle">
-                    Nos enorgullece compartir las experiencias de quienes ya han disfrutado de La Jara Rosa.
-                </p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8">
+        <div className="space-y-8 md:space-y-12">
+            <h1 className="text-3xl md:text-5xl font-heading text-marron mb-4 text-center">Qué dicen nuestros huéspedes</h1>
+            <p className="text-base md:text-xl text-gris-texto text-center">
+                Nos enorgullece compartir las experiencias de quienes ya han disfrutado de La Jara Rosa.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {reviews.map((review, i) => (
-                    <div key={i} className="bg-white/80 backdrop-blur-sm card p-8 text-center">
-                        <p className="text-gris-texto italic">“{review.comentario}”</p>
-                        <div className="mt-4 font-bold text-lg text-verde">- {review.nombre}</div>
-                        <div className="mt-2 flex justify-center text-yellow-500">
-                            {[...Array(review.rating)].map((_, j) => (
-                                <svg key={j} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.539 1.118l-3.368-2.448a1 1 0 00-1.175 0l-3.368 2.448c-.784.57-1.838-.197-1.539-1.118l1.287-3.957a1 1 0 00-.364-1.118L2.35 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69L9.049 2.927z" /></svg>
-                            ))}
-                        </div>
-                    </div>
+                    <AnimatedOpinionCard key={i} review={review} i={i} />
                 ))}
             </div>
         </div>

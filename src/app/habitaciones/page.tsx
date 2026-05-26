@@ -34,29 +34,47 @@ export default function Habitaciones() {
     const habitaciones: Habitacion[] = [
         {
             nombre: "Salón y Cocina",
-            imagenes: ["/images/SALON/salon (2).jpg","/images/SALON/salon.jpg","/images/SALON/salon2.jpg", "/images/SALON/salon3.jpg", "/images/SALON/salon4.jpg", "/images/SALON/salon5.jpg", "/images/SALON/salon7.jpg","/images/SALON/salon8.jpg"],
+            imagenes: [
+                "/images/SALON/salonb.jpeg",
+                "/images/SALON/salona.jpeg",
+                "/images/SALON/salonestufa.jpeg",
+                "/images/SALON/sofa.jpeg",
+                "/images/SALON/cocina.jpeg"
+            ],
             descripcion: "Un espacio abierto y acogedor con cocina totalmente equipada y un cómodo sofá-cama para dos personas, ideal para disfrutar en compañía.",
             alt: "Salón comedor con cocina americana y sofá cama en la casa rural La Jara Rosa."
         },
         {
             nombre: "Patio y Exteriores",
             imagenes: [
-                "/images/PATIO_EXTERIORES/patio (4).jpg",
-                "/images/PATIO_EXTERIORES/piscina.jpg",
-                "/images/PATIO_EXTERIORES/tumbonas.jpg",
-                "/images/PATIO_EXTERIORES/patio (2).jpg",
-                "/images/PATIO_EXTERIORES/patio (3).jpg",
+                "/images/PATIO_EXTERIORES/patio.jpeg",
+                "/images/PATIO_EXTERIORES/mesapatio.jpeg",
+                "/images/PATIO_EXTERIORES/tumbonas2.jpeg",
+                "/images/PATIO_EXTERIORES/barbacoa2.jpeg",
+                "/images/PATIO_EXTERIORES/barbacoa3.jpeg",
                 "/images/PATIO_EXTERIORES/fachada2.jpg",
-                "/images/PATIO_EXTERIORES/fachada (4).jpg"
             ],
             descripcion: "Disfruta de nuestra piscina en verano, una barbacoa al aire libre y una zona chill-out para relajarte bajo el sol de los Montes de Toledo.",
             alt: "Patio exterior con piscina, barbacoa y zona chill-out en La Jara Rosa."
         },
         {
+            nombre: "Piscina",
+            imagenes: [
+                "/images/piscina/piscina2.jpeg", // Asumo que tienes estas imágenes o las crearás
+                "/images/piscina/piscinacascada1.jpeg",
+                "/images/piscina/piscinadia.jpeg",
+                "/images/piscina/piscinanoche.jpeg",
+                "/images/piscina/piscina.jpg",
+            ],
+            descripcion: "Piscina del alojamiento rural La Jara Rosa perfecta para tiempos de calor y vacaciones.",
+            alt: "Piscina en el patio de la casa rural La Jara Rosa."
+        },
+        {
             nombre: "Habitación El Olivar",
             imagenes: [
-                "/images/HABITACION_CABECERO/cabecero1.jpg", 
-                "/images/HABITACION_CABECERO/cabecero3.jpg", 
+                "/images/HABITACION_CABECERO/cabecero4.jpeg",
+                "/images/HABITACION_CABECERO/cabecero1.jpg",
+                "/images/HABITACION_CABECERO/cabecero3.jpg",
                 "/images/HABITACION_CABECERO/cabecero.jpg",
                 "/images/HABITACION_CABECERO/cabecero7.jpg",
                 "/images/HABITACION_CABECERO/b_cabecero2.jpg"
@@ -67,10 +85,10 @@ export default function Habitaciones() {
         {
             nombre: "Habitación El Encinar",
             imagenes: [
-                "/images/HABITACION_GRIS/gris1.jpg", 
-                "/images/HABITACION_GRIS/gris3.jpg", 
-                "/images/HABITACION_GRIS/gris.jpg",
-                "/images/HABITACION_GRIS/gris4.jpg", 
+                "/images/HABITACION_GRIS/gris5.jpeg",
+                "/images/HABITACION_GRIS/gris6.jpeg",
+                "/images/HABITACION_GRIS/gris1.jpg",
+                "/images/HABITACION_GRIS/gris3.jpg",
                 "/images/HABITACION_GRIS/b_gris2.jpg"
             ],
             descripcion: "Decorada en tonos grises, esta habitación es un remanso de paz y tranquilidad.",
